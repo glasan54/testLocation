@@ -26,8 +26,9 @@ app.get('/', (req, res) => {
 app.post('/webhook', (req, res,next) => {
   console.log('POST: /');
   console.log('Body: ',req.body);
-
-  res.status(201).json(req.body)
+  res.send({
+    success: true
+  });
 });
 
 app.listen(port, () => {
